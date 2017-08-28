@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <!-- Stylesheets -->
+    <link href="{%static "css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{%static "css/animate.css" %}" rel="stylesheet">
+    <link href="{%static "css/style.css" %}" rel="stylesheet">
+
+    <!-- Responsive -->
+    <link href="{%static "css/responsive.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Main Header-->
+    <header class="main-header">
+      <!-- Header Top -->
+      <div class="header-top">
+        <div class="auto-container">
+          <div class="clearfix">
+
+            <!--Top Left-->
+            <div class="top-left hidden-xs">
+              <!--social-icon-->
+              <div class="social-icon"> <a href="#"><span class="fa fa-facebook"></span></a> <a href="#"><span class="fa fa-youtube-play"></span></a> <a href="#"><span class="fa fa-linkedin"></span></a> <a href="#"><span class="fa fa-instagram"></span></a> <a href="#"><span class="fa fa-twitter"></span></a> </div>
+            </div>
+
+            <!--Top Right-->
+            <div class="top-right">
+              <div class="login pull-right">
+                <button type="button" class="theme-btn btn-style-three btn-xs" data-toggle="modal" data-target="#myModal"> <i class="fa fa-user" aria-hidden="true"></i> Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Top End -->
+
+      <!-- Main Box -->
+      <div class="main-box">
+        <div class="auto-container">
+          <div class="outer-container clearfix">
+            <!--Logo Box-->
+            <div class="logo-box">
+              <div class="logo"><a href="home.html"><img src="{%static "images/logo.png" %}" alt=""></a></div>
+            </div>
+
+            <!--Nav Outer-->
+            <div class="nav-outer clearfix">
+              <!-- Main Menu -->
+              <nav class="main-menu">
+                <div class="navbar-header">
+                  <!-- Toggle Button -->
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                </div>
+                <div class="navbar-collapse collapse clearfix">
+                  <ul class="navigation clearfix">
+                    <li class="current dropdown"><a href="home.html">Home</a></li>
+                    <li class="dropdown"><a href="aboutus.html">About Us</a>
+                      <ul>
+                        <li><a href="aboutus.html">About NAKA</a></li>
+                        <li><a href="#">ByLaws of NAKA</a></li>
+                        <li><a href="#">President's Message</a></li>
+                        <li><a href="#">Khabbar</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Leadership</a>
+                      <ul>
+                        <li><a href="#">Executive Committee</a></li>
+                        <li><a href="#">Board of Directors</a></li>
+                        <li><a href="#">Local Co-ordinators</a></li>
+                        <li><a href="#">Past Leadership</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Endowment</a>
+                      <ul>
+                        <li><a href="#">About NAKA Endowment</a></li>
+                        <li><a href="#">Appeal</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Donate to Endowment</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Naka Cares</a>
+                      <ul>
+                        <li><a href="#">About NAKA CARES</a></li>
+                        <li><a href="#">Safety Guidelines for USA</a></li>
+                        <li><a href="#">Student Visa Guidelines </a></li>
+                        <li><a href="#">Need Help</a></li>
+                        <li><a href="#">Contact our Volunteers</a></li>
+                        <li><a href="#">Join NAKA CARES </a></li>
+                        <li><a href="#">In Case of Emergency</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Services</a>
+                      <ul>
+                        <li><a href="#">Soirika (Matrimonials)</a></li>
+                        <li><a href="#">Mhalgade Corner</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="#">Randhap Corner</a></li>
+                        <li><a href="#">Real Estate</a></li>
+                        <li><a href="#">Classifieds</a></li>
+                        <li><a href="#">Destination India (Konkani Travels)</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="membership.html">Membership</a>
+                      <ul>
+                        <li><a href="membership.html">How to become a member</a></li>
+                        <li><a href="membership.html">Benefits</a></li>
+                        <li><a href="membership.html">Members Listing (Need Login)</a></li>
+                        <li><a href="membership.html">Membership Help</a></li>
+                        <li><a href="membership.html">Members Suggestions & Ideas</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="donate.html">Donate</a>
+                      <ul class="dropdown-right">
+                        <li><a href="donate.html">Donate to your MyNAKA</a></li>
+                        <li><a href="#">Renew Membership</a></li>
+                        <li><a href="#">Donate to NAKA Endowment</a></li>
+                        <li><a href="#">What we do with your donations?</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="discussion.html">Blogs</a>
+                      <ul class="dropdown-right">
+                        <li><a href="#">Blogs</a></li>
+                        <li><a href="discussion.html">Discussion Boards</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- Main Menu End-->
+
+            </div>
+            <!--Nav Outer End-->
+
+            <!-- Hidden Nav Toggler -->
+            <div class="nav-toggler">
+              <button class="hidden-bar-opener"><span class="icon fa fa-bars"></span></button>
+            </div>
+            <!-- / Hidden Nav Toggler -->
+
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--End Main Header -->
+
+      <!-- Hidden Navigation Bar -->
+      <section class="hidden-bar right-align">
+        <div class="hidden-bar-closer">
+          <button class="btn"><i class="fa fa-close"></i></button>
+        </div>
+
+        <!-- Hidden Bar Wrapper -->
+        <div class="hidden-bar-wrapper">
+          <div class="logo text-center"> <a href="index.html"><img src="{%static "images/logo.png" %}" alt=""></a> </div>
+          <!-- .Side-menu -->
+          <div class="side-menu">
+            <!-- .navigation -->
+            <ul class="navigation clearfix">
+              <li class="current dropdown"><a href="#">Home</a></li>
+              <li class="dropdown"><a href="#">About Us</a>
+                <ul>
+                  <li><a href="about-us.html">About NAKA</a></li>
+                  <li><a href="#">ByLaws of NAKA</a></li>
+                  <li><a href="#">President's Message</a></li>
+                  <li><a href="#">Khabbar</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Leadership</a>
+                <ul>
+                  <li><a href="#">Executive Committee</a></li>
+                  <li><a href="#">Board of Directors</a></li>
+                  <li><a href="#">Local Co-ordinators</a></li>
+                  <li><a href="#">Past Leadership</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Endowment</a>
+                <ul>
+                  <li><a href="#">About NAKA Endowment</a></li>
+                  <li><a href="#">Appeal</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Donate to Endowment</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Naka Cares</a>
+                <ul>
+                  <li><a href="#">About NAKA CARES</a></li>
+                  <li><a href="#">Safety Guidelines for USA</a></li>
+                  <li><a href="#">Student Visa Guidelines </a></li>
+                  <li><a href="#">Need Help</a></li>
+                  <li><a href="#">Contact our Volunteers</a></li>
+                  <li><a href="#">Join NAKA CARES </a></li>
+                  <li><a href="#">In Case of Emergency</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Services</a>
+                <ul>
+                  <li><a href="#">Soirika (Matrimonials)</a></li>
+                  <li><a href="#">Mhalgade Corner</a></li>
+                  <li><a href="#">Directory</a></li>
+                  <li><a href="#">Randhap Corner</a></li>
+                  <li><a href="#">Real Estate</a></li>
+                  <li><a href="#">Classifieds</a></li>
+                  <li><a href="#">Destination India (Konkani Travels)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#">Membership</a>
+                <ul>
+                  <li><a href="membership.html">How to become a member</a></li>
+                  <li><a href="membership.html">Benefits</a></li>
+                  <li><a href="membership.html">Members Listing (Need Login)</a></li>
+                  <li><a href="membership.html">Membership Help</a></li>
+                  <li><a href="membership.html">Members Suggestions & Ideas</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="donate.html">Donate</a>
+                <ul class="dropdown-right">
+                  <li><a href="#">Donate to your MyNAKA</a></li>
+                  <li><a href="#">Renew Membership</a></li>
+                  <li><a href="#">Donate to NAKA Endowment</a></li>
+                  <li><a href="#">What we do with your donations?</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="discussion.html">Blogs</a>
+                <ul class="dropdown-right">
+                  <li><a href="#">Blogs</a></li>
+                  <li><a href="discussion.html">Discussion Boards</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- /.Side-menu -->
+
+          <div class="social-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- / Hidden Bar Wrapper -->
+      </section>
+      <!-- / Hidden Bar -->
+  </body>
+</html>

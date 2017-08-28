@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+ <h3>Contact Form </h3>
+ <form method="post" action="">
+  {% csrf_token %}
+  <div class="form-group col-md-9 col-sm-6 col-xs-12">
+      <div class="field-label">Name <span class="req">*</span></div>
+  {{ contact_form.contact_name }}
+  </div>
+  <div class="form-group col-md-12 col-sm-12 col-xs-12">
+      <div class="field-label">Email Id <span class="req">*</span></div>
+  {{ contact_form.contact_email }}
+  </div>
+
+  <div class="form-group col-md-6 col-sm-6 col-xs-12">
+      <div class="field-label">Comment <span class="req">*</span></div>
+  {{ contact_form.contact_comment }}
+  </div>
+  </br/>
+  <div class="form-group col-md-9 col-sm-6 col-xs-12">
+    <li><input type="submit" class="theme-btn btn-style-three next-step"></button></li>
+  </div>
+ </form>
+ </div>
+{% endblock %}

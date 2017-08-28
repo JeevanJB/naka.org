@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+  {% block content %}
+<div class="page-wrapper">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active one">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Lorem ipsum<br>
+            <span>dolor</span> sit amet.</h1>
+        </div>
+      </div>
+    </div>
+    <div class="item two">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Lorem ipsum<br>
+            <span>dolor</span> sit amet.</h1>
+        </div>
+      </div>
+    </div>
+    <div class="item three">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Lorem ipsum<br>
+            <span>dolor</span> sit amet.</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+<!--Who We Are-->
+<section class="who-we-are">
+  <div class="auto-container">
+    <!--Section Title-->
+    <div class="sec-title centered">
+      <h2>WHO WE ARE</h2>
+      <div class="separator"></div>
+      <div class="desc-text"> North American Konkani Association (NAKA) was formed in 1998 when Ms. Nina Padukone, Damodhar Baliga and Vasanth Bhat saw a need for an all encompassing national organization to help unite the NorthAmerican Konkani community, with the goal of preserving our language (our means of communication), showcasing our culture, and nurturing our customs and traditions. With this visionguiding us, NAKA strives everyday to serve as a resource, provide a helpful hand when needed, and create a national presence for the Konkani community. </div>
+    </div>
+
+    <!--Tabs Box / Tabs Style One-->
+    <div class="tabs-box tabs-style-one">
+      <!--Tab Buttons-->
+      <ul class="tab-buttons clearfix">
+        <li class="tab-btn active-btn" data-tab="#tab-one"><span class="icon flaticon-target"></span> OUR MISSION</li>
+        <li class="tab-btn" data-tab="#tab-two"><span class="icon flaticon-eye"></span> OUR VISION</li>
+        <li class="tab-btn" data-tab="#tab-three"><span class="icon flaticon-envelope"></span> OUR MESSAGE</li>
+      </ul>
+
+      <!--Tabs Content-->
+      <div class="tabs-content">
+
+        <!--Tab / Active Tab-->
+        <div class="tab active-tab" id="tab-one">
+          <div class="row clearfix">
+            <!--Image Column-->
+            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+              <figure class="image-box"><img src="{%static "images/featured-image.jpg" %}" alt=""></figure>
+            </div>
+            <!--Content Column-->
+            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+              <div class="inner">
+                <h3>How can the Konkani community help NAKA?</h3>
+                <div class="strong-text">The previous NAKA Board (20--) included 17 members and was not
+                  operative effectively. </div>
+                <div class="text">In addition to the founding three members, the new Board members were the leaders of the Sammelans held in Houston, San Francisco, Chicago, Los Angeles, and Canada. Several Board Members were reluctant to continue due to other commitments and requested that they be dropped from the Board. The consensus was that there was a need to start with a smaller team, a new charter, mission and goals, so the Board decided to seek nominations for the five positions from within the existing Board. Since NAKA had no membership system at the time, there was no formal process for nomination within the entire Konkani community.</div>
+                <a href="#" class="theme-btn btn-style-two">READ MORE ABOUT US</a> </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Tab-->
+        <div class="tab" id="tab-two">
+          <div class="row clearfix">
+            <!--Image Column-->
+            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+              <figure class="image-box"><img src="{%static "images/featured-image.jpg" %}" alt=""></figure>
+            </div>
+            <!--Content Column-->
+            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+              <div class="inner">
+                <h3>How can the Konkani community help NAKA?</h3>
+                <div class="strong-text">The previous NAKA Board (20--) included 17 members and was not
+                  operative effectively. </div>
+                <div class="text">In addition to the founding three members, the new Board members were the leaders of the Sammelans held in Houston, San Francisco, Chicago, Los Angeles, and Canada. Several Board Members were reluctant to continue due to other commitments and requested that they be dropped from the Board. The consensus was that there was a need to start with a smaller team, a new charter, mission and goals, so the Board decided to seek nominations for the five positions from within the existing Board. Since NAKA had no membership system at the time, there was no formal process for nomination within the entire Konkani community.</div>
+                <a href="#" class="theme-btn btn-style-two">READ MORE ABOUT US</a> </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Tab-->
+        <div class="tab" id="tab-three">
+          <div class="row clearfix">
+            <!--Image Column-->
+            <div class="image-column col-md-6 col-sm-6 col-xs-12">
+              <figure class="image-box"><img src="{%static "images/featured-image.jpg" %}" alt=""></figure>
+            </div>
+            <!--Content Column-->
+            <div class="content-column col-md-6 col-sm-6 col-xs-12">
+              <div class="inner">
+                <h3>How can the Konkani community help NAKA?</h3>
+                <div class="strong-text">The previous NAKA Board (20--) included 17 members and was not
+                  operative effectively. </div>
+                <div class="text">In addition to the founding three members, the new Board members were the leaders of the Sammelans held in Houston, San Francisco, Chicago, Los Angeles, and Canada. Several Board Members were reluctant to continue due to other commitments and requested that they be dropped from the Board. The consensus was that there was a need to start with a smaller team, a new charter, mission and goals, so the Board decided to seek nominations for the five positions from within the existing Board. Since NAKA had no membership system at the time, there was no formal process for nomination within the entire Konkani community.</div>
+                <a href="#" class="theme-btn btn-style-two">READ MORE ABOUT US</a> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Recent Causes Section-->
+<section class="recent-causes-section">
+  <div class="auto-container">
+    <!--Section Title-->
+    <div class="sec-title centered">
+      <h2>NAKA <i class="fa fa-heart" aria-hidden="true"></i> CARES</h2>
+      <div class="separator"></div>
+      <div class="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer molestie ut est imperdiet finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus pharetra sit amet mauris in feugiat. Nulla.</div>
+    </div>
+    <div class="row clearfix">
+      <!--Default Cause Box-->
+      <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
+        <div class="inner-box wow fadeIn">
+          <div class="image-box">
+            <figure class="image"><a href="#"><img src="{%static "images/Safety-guidelines-for-usa.jpg" %}" alt=""></a></figure>
+            <div class="progress-box">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="lower-content">
+            <h3><a href="#">Safety guidelines for usa</a></h3>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae ipsum magna. Cras tristique urna at eros hendrerit efficitur. Donec.</div>
+            <div class="links"><a href="#" class="theme-btn btn-style-three">NAKA CARE</a> <a href="#" class="theme-btn btn-style-four">READ MORE</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!--Default Cause Box-->
+      <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
+        <div class="inner-box wow fadeIn">
+          <div class="image-box">
+            <figure class="image"><a href="#"><img src="{%static "images/Student-Visa-Guidelines.jpg" %}" alt=""></a></figure>
+            <div class="progress-box">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="lower-content">
+            <h3><a href="#">Student Visa Guidelines</a></h3>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae ipsum magna. Cras tristique urna at eros hendrerit efficitur. Donec.</div>
+            <div class="links"><a href="#" class="theme-btn btn-style-three">NAKA CARE</a> <a href="#" class="theme-btn btn-style-four">READ MORE</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!--Default Cause Box-->
+      <div class="default-cause-box col-md-4 col-sm-6 col-xs-12">
+        <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="600ms">
+          <div class="image-box">
+            <figure class="image"><a href="#"><img src="{%static "images/Help-and-Incase-of-Emergency.jpg" %}" alt=""></a></figure>
+            <div class="progress-box">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="lower-content">
+            <h3><a href="single-cause.html">Help and Incase of Emergency</a></h3>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae ipsum magna. Cras tristique urna at eros hendrerit efficitur. Donec.</div>
+            <div class="links"><a href="#" class="theme-btn btn-style-three">NAKA CARE</a> <a href="#" class="theme-btn btn-style-four">READ MORE</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Call To Action-->
+<section class="call-to-action" style="background-image:url({%static "images/Volunteer-bg.jpg" %});">
+  <div class="auto-container">
+    <!--Section Title-->
+    <div class="sec-title centered">
+      <h2>ARE YOU READY TO VOLUNTEER?</h2>
+      <div class="separator"></div>
+      <div class="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer molestie ut est imperdiet finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus pharetra sit amet mauris in feugiat. Nulla.</div>
+    </div>
+    <div class="links"><a href="volunteer.html" class="theme-btn btn-style-two">BECOME A VOLUNTEER</a> <a href="donate.html" class="theme-btn btn-style-one">MAKE DONATION</a></div>
+  </div>
+</section>
+<!--News Section-->
+<section class="news-section">
+  <div class="auto-container">
+    <!--Section Title-->
+    <div class="sec-title centered">
+      <h2>OUR BLOG</h2>
+      <div class="separator"></div>
+      <div class="desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer molestie ut est imperdiet finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus pharetra sit amet mauris in feugiat. Nulla.</div>
+    </div>
+    <div class="row clearfix">
+      <!--Column-->
+      <div class="column col-lg-7 col-md-6 col-sm-12 col-xs-12">
+        <!--News Style One-->
+        <div class="news-style-one">
+          <div class="inner-box">
+            <figure class="image-box"><img src="{%static "images/blog/nutty-green-beans.jpg" %}" alt=""><a href="#" class="overlay-link">
+              <div class="icon"><span class="flaticon-cross"></span></div>
+              </a></figure>
+            <div class="post-meta clearfix">
+              <div class="pull-left"><a href="#"><span class="fa fa-calendar-o"></span> 03 January 2017</a></div>
+              <div class="pull-right"><a href="#"><span class="fa fa-heart-o"></span> 3</a> &ensp;&ensp; <a href="#"><span class="fa fa-comment-o"></span> 7</a></div>
+            </div>
+            <div class="lower-content">
+              <h3><a href="#">Nutty Green Beans</a></h3>
+              <div class="text">My kids love shenga chutney pitto, probably that is the only way they eat peanuts without a fuss. So I have been thinking to use similar combination with vegetables. I have seen my Marathi friends adding a peanut powder to raitas, green beans and some other vegetables. So I prepared this nutty green beans last … </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Column-->
+      <div class="column col-lg-5 col-md-6 col-sm-12 col-xs-12">
+        <!--News Style Two-->
+        <div class="news-style-two">
+          <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="0ms">
+            <figure class="image-box"><img src="{%static "images/blog/1.jpg" %}" alt=""><a href="#" class="overlay-link">
+              <div class="icon"><span class="flaticon-cross"></span></div>
+              </a></figure>
+            <div class="lower-content">
+              <div class="post-meta"><a href="#"><span class="fa fa-calendar-o"></span> 05 January 2017</a></div>
+              <h3><a href="#">Bottlegourd Dal </a></h3>
+              <div class="text">I associated bottle gourd (gardudde in Konkani) with mostly with the burfis(khadi). </div>
+            </div>
+          </div>
+        </div>
+
+        <!--News Style Two-->
+        <div class="news-style-two">
+          <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="300ms">
+            <figure class="image-box"><img src="{%static "images/blog/2.jpg" %}" alt=""><a href="#" class="overlay-link">
+              <div class="icon"><span class="flaticon-cross"></span></div>
+              </a></figure>
+            <div class="lower-content">
+              <div class="post-meta"><a href="#"><span class="fa fa-calendar-o"></span> 06 January 2017</a></div>
+              <h3><a href="blog-single.html">Green Tomato Pickle</a></h3>
+              <div class="text">I planted some tomatoes in our backyard this year. I was not sure what would be the yield.</div>
+            </div>
+          </div>
+        </div>
+
+        <!--News Style Two-->
+        <div class="news-style-two">
+          <div class="inner-box wow fadeIn" data-wow-duration="1500ms" data-wow-delay="600ms">
+            <figure class="image-box"><img src="{%static "images/blog/3.jpg" %}" alt=""><a href="#" class="overlay-link">
+              <div class="icon"><span class="flaticon-cross"></span></div>
+              </a></figure>
+            <div class="lower-content">
+              <div class="post-meta"><a href="#"><span class="fa fa-calendar-o"></span> 07 January 2017</a></div>
+              <h3><a href="blog-single.html">Kale Paratha</a></h3>
+              <div class="text">Hope you all had a happy Ganesh chaturthi. We had a small pooja at home, kids had a lovely time. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+  {% endblock %}

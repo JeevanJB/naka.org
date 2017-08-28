@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+
+  </head>
+  <body>
+
+    <div class="modal fade custom-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form id="login1" class="form default-form" data-transition="fade">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" >Login to your MyNaka Account</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2" >
+                  <div class="row clearfix">
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;"> <a href="javascript:void(0)" class="social-btn social-btn--google js-google-btn shadowed-btn fxac"> <i class="udi udi-google-plus social-icon"></i> Continue with Google <span class="udi udi-circle-loader udi-small dn-force"></span> </a> </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;">
+                      <div class="divider"> <span class="or">OR</span> </div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                      <input type="text" name="field-name" value="" placeholder="Email" autofocus>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                      <input type="password" name="password" value="" placeholder="Password">
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0">
+                      <button type="button" class="theme-btn btn-style-two btn-block">Login</button>
+                      <p class="small"  align="center">or <a href="#" onClick="forget()">Forgot Password</a> </p>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;">
+                      <div class="divider" style="margin: 10px 0;"></div>
+                      <p align="center">Don't have an account yet? <a href="#" onClick="signUp()">Sign up</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form id="signUp1" method="post" enctype= multipart/form-data class="form default-form" style="display:none"  data-transition="fade">
+            {% csrf_token %}
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" >Sign Up</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2" >
+                  <div class="row clearfix">
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;"> <a href="javascript:void(0)" class="social-btn social-btn--google js-google-btn shadowed-btn fxac"> <i class="udi udi-google-plus social-icon"></i> Continue with Google <span class="udi udi-circle-loader udi-small dn-force"></span> </a> </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;">
+                      <div class="divider"> <span class="or">OR</span> </div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12"> Full Name
+                      <!-- <input type="text" name="field-name" value="" placeholder="Full Name" > -->
+                      {{ user_form.first_name }}
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12"> Username/Email
+                      <!-- <input type="text" name="field-name" value="" placeholder="Email"> -->
+                      {{ user_form.username }}
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12"> Password
+                      <!-- <input type="password" name="password" value="" placeholder="Password"> -->
+                      {{ user_form.password }}
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12"> Mobile <br/>
+                      <!-- <input type="text" name="field-name" value="" placeholder="Mobile"> -->
+                      {{ profile_form.mobile }}
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0">
+                      <input type="submit" value = "SignUp"/>
+                      <button type="button" name = "signup_btn" class="theme-btn btn-style-two btn-block">Sign Upbtn</button>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;">
+                      <div class="divider" style="margin: 10px 0;"></div>
+                      <p align="center">Already have an account? <a href="#" onClick="login()">Login</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <form id="forget" class="form default-form " style="display:none" data-transition="fade">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" >Reset your MyNaka Account Password</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2" >
+                  <div class="row clearfix">
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;"> <a href="javascript:void(0)" class="social-btn social-btn--google js-google-btn shadowed-btn fxac"> <i class="udi udi-google-plus social-icon"></i> Continue with Google <span class="udi udi-circle-loader udi-small dn-force"></span> </a> </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;">
+                      <div class="divider"> <span class="or">OR</span> </div>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                      <input type="text" name="field-name" value="" placeholder="Email" >
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0">
+                      <button type="button" class="theme-btn btn-style-two btn-block">Reset Password</button>
+
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0;">
+                      <div class="divider" style="margin: 10px 0;"></div>
+                      <p align="center"> <a href="#" onClick="login()">Login</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{%static "js/bootstrap.min.js" %}"></script>
+    <script src="{%static "js/script.js" %}"></script>
+  </body>
+  <script type="text/javascript">
+
+  function signUp(){
+    $("#signUp1").css("display", "block");
+    $("#login1").css("display", "none");
+
+    }
+
+    function login(){
+    $("#signUp1").css("display", "none");
+    $("#forget").css("display", "none");
+    $("#login1").css("display", "block");
+
+    }
+
+    function forget(){
+    $("#forget").css("display", "block");
+    $("#login1").css("display", "none");
+
+    }
+
+  </script>
+</html>
