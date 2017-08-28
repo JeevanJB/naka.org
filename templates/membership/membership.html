@@ -1,0 +1,394 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<!--Main box-->
+ <!--Page Title-->
+    <section class="page-title" style="background-image:url({%static "images/Volunteer-bg.jpg" %});">
+        <div class="auto-container">
+            <h1>Membership</h1>
+            <div class="bread-crumb-outer">
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Membership</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+<section class="volunteer-section">
+    <div class="wizard">
+      <div class="wizard-border-bottom">
+        <div class="auto-container">
+          <div class="wizard-inner">
+                <ul class="nav nav-tabs" role="tablist">
+
+                    <li role="presentation" class="active">
+                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="REGISTRATION" >
+                            <span class="info-block">
+                        	<div class="icon-box wow fadeIn animated" data-wow-duration="1500ms" data-wow-delay="0ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeIn;"><span class="flaticon-user-1"></span><span class="left-top-span hidden-xs"></span><span class="right-top-span hidden-xs"></span><span class="left-bottom-span hidden-xs"></span><span class="right-bottom-span hidden-xs "></span></div><div class="inner">
+                            </div>
+
+                        </span>
+
+                        </a>
+                        <p class="hidden-xs">REGISTRATION</p>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Directory Preference">
+                        <span class="info-block">
+                        	<div class="inner">
+                            	<div class="icon-box wow fadeIn animated" data-wow-duration="1500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeIn;"><span class="flaticon-list-1"><span class="left-top-span hidden-xs"></span><span class="right-top-span hidden-xs"></span><span class="left-bottom-span hidden-xs"></span><span class="right-bottom-span hidden-xs "></span></div>
+                            </div>
+                        </span>
+
+                        </a>
+                        <p class="hidden-xs">Directory Preference</p>
+                    </li>
+                    <li role="presentation" class="disabled">
+                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="MAKE DONATION">
+                            <span class="info-block">
+                        	<div class="inner">
+                            	<div class="icon-box wow fadeIn animated" data-wow-duration="1500ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 600ms; animation-name: fadeIn;"><span class="flaticon-money-bag"></span><span class="left-top-span hidden-xs"></span><span class="right-top-span hidden-xs"></span><span class="left-bottom-span hidden-xs"></span><span class="right-bottom-span hidden-xs "></span></div>
+                             </div>
+                        </span>
+                        </a>
+                        <p class="hidden-xs">MAKE DONATION</p>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="MEMBERSHIP">
+                            <span class="info-block">
+                        	<div class="inner">
+                            	<div class="icon-box wow fadeIn animated" data-wow-duration="1500ms" data-wow-delay="900ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 900ms; animation-name: fadeIn;"><span class="flaticon-sticker-1"></span><span class="left-top-span hidden-xs"></span><span class="right-top-span hidden-xs"></span><span class="left-bottom-span hidden-xs"></span><span class="right-bottom-span hidden-xs "></span></div>
+                            </div>
+                        </span>
+                        </a>
+                        <p class="hidden-xs">MEMBERSHIP</p>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+        <div class="become-volunteer">
+	         <div class="auto-container">
+             <div class="default-form">
+                <form name="membership_form" method="post" enctype= multipart/form-data>
+                  {% csrf_token %}
+                <!--  {{ user_form.as_p }}
+                  {{ membership_form.as_p }} -->
+
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                        <div class="step1">
+                       	<div class="row clearfix">
+                        <!--Left Column-->
+                        <div class="right-column col-md-6 col-sm-12 col-xs-12">
+                            <div class="default-title"><h3>Personal DETAILS</h3></div>
+                            <div class="row clearfix">
+
+                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">Title <span class="req">*</span></div>
+                                    <select ="" >
+                                    <option>Mr.</option>
+                                    <option>Mrs.</option>
+                                    <option>Ms.</option>
+                                    <option>Miss.</option>
+                                    <option>Dr.</option>
+                                </select>
+                                </div>
+
+                                <div class="form-group col-md-9 col-sm-6 col-xs-12">
+                                    <div class="field-label">Full Name <span class="req">*</span></div>
+                                <!--    <input type="text" id = "id_user_fullname" name="user_fullname" placeholder=""> -->
+                                {{ membership_form.user_fullname }}
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label">Profession <span class="req">*</span></div>
+                                <!--    <input type="text" id = "id_user_profession" name="user_profession" placeholder=""> -->
+                                {{ membership_form.user_profession }}
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <div class="field-label">Specialty <span class="req">*</span></div>
+                                <!--    <input type="text" id = "id_user_speciality" name="user_speciality" placeholder=""> -->
+                                {{ membership_form.user_speciality }}
+                                </div>
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <div class="field-label">Alumni Of</div>
+                                <!--    <input type="text" name="field-name" value="" placeholder=""> -->
+                                {{ membership_form.user_alumniOf }}
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--Right Column-->
+                        <div class="right-column col-md-6 col-sm-12 col-xs-12">
+                            <div class="default-title"><h3>Spouse DETAILS</h3></div>
+                            <div class="row clearfix">
+
+                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">Title </div>
+                                    <select ="" >
+                                    <option>Mr.</option>
+                                    <option>Mrs.</option>
+                                    <option>Ms.</option>
+                                    <option>Miss.</option>
+                                    <option>Dr.</option>
+                                </select>
+                                </div>
+
+                                <div class="form-group col-md-9 col-sm-6 col-xs-12">
+                                    <div class="field-label">Full Name</div>
+                                <!--    <input type="text" name="field-name" value="" placeholder=""> -->
+                                {{ membership_form.spouse_fullname }}
+                                </div>
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label">Profession</div>
+                                <!--    <input type="text" name="field-name" value="" placeholder=""> -->
+                                {{ membership_form.spouse_profession }}
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <div class="field-label">Specialty</div>
+                                <!--    <input type="text" name="field-name" value="" placeholder=""> -->
+                                {{ membership_form.spouse_speciality }}
+                                </div>
+
+                                <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                                    <div class="field-label">Alumni Of</div>
+                                <!--    <input type="text" name="field-name" value="" placeholder=""> -->
+                                {{ membership_form.spouse_alumniOf }}
+                                </div>
+                            </div>
+
+                        </div>
+                    	</div>
+                    <hr/>
+                    <div class="row clearfix">
+                        <div class="right-column col-md-12 col-sm-12 col-xs-12">
+                            <div class="default-title"><h3>Address/Phone</h3></div>
+                            <div class="row clearfix">
+                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">Cell Phone <span class="req">*</span></div>
+                                    <!-- <input type="text" name="field-name" value="" placeholder="" > -->
+                                    {{ membership_form.user_cellPhone }}
+                                </div>
+                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">Home Phone</div>
+                                    <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.user_homePhone }}
+                                </div>
+                                <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                                    <div class="field-label">Address<span class="req">*</span></div>
+                                    <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.user_address }}
+                                </div>
+								                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">Country <span class="req">*</span></div>
+                                    <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.user_country }}
+                                </div>
+                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">State <span class="req">*</span></div>
+                                    <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.user_state }}
+                                </div>
+                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">City <span class="req">*</span></div>
+                                    <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.user_city }}
+                                </div>
+                                <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                                    <div class="field-label">Zip <span class="req">*</span></div>
+                                    <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.user_zip }}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                  </div>
+                        <ul class="list-inline pull-right  wizard-footer">
+                          {{ membership_form.errors }}
+                          <input type="submit" name="" value="Register1">
+                            <li><button type="button" class="theme-btn btn-style-three next-step">Save and continue</button></li>
+                        </ul>
+                </div>
+
+                    <div class="tab-pane" role="tabpanel" id="step2">
+                        <div class="step2">
+                        <div class="row clearfix">
+
+                        <div class="right-column col-md-12 col-sm-12 col-xs-12">
+                            <div class="default-title"><h3>Directory Preference</h3></div>
+                            <div class="row clearfix">
+                                <div class="form-group col-md-4 col-sm-6 col-xs-12">
+                                    <div class="field-label">Home Town/Village (India) <span class="req">*</span></div>
+                                <!--    <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.user_hometown }}
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-6 col-xs-12">
+                                    <div class="field-label">District <span class="req">*</span></div>
+                                <!-- <input type="text" name="field-name" value="" placeholder="" > -->
+                                    {{ membership_form.district }}
+                                </div>
+
+                                <div class="form-group col-md-4 col-sm-6 col-xs-12">
+                                    <div class="field-label">Interests</div>
+                               <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                                    {{ membership_form.interests }}
+                                </div>
+
+                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="field-label">Do you like to Volunteer for: </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                      <label>
+                                    <!--    <input type="checkbox" value=""> -->
+                                    {{ membership_form.events }}
+                                        Events
+                                      </label>
+                                    </div>
+                                	<div class="checkbox">
+                                      <label>
+                                    <!-- <input type="checkbox" value=""> -->
+                                    {{ membership_form.community_service }}
+                                        Community Service
+                                      </label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" value="">
+                                        Team Square
+                                      </label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" value="">
+                                        Language/Literature
+                                      </label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" value="">
+                                        Sports/Arts
+                                      </label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" value="">
+                                        Foundation
+                                      </label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" value="">
+                                        Women’s Support
+                                      </label>
+                                    </div>
+                                    <div class="checkbox">
+                                      <label>
+                                        <input type="checkbox" value="">
+                                        Spiritual
+                                      </label>
+                                    </div>
+                            </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        </div>
+
+                        </div>
+                        <ul class="list-inline pull-right  wizard-footer">
+                            <li><button type="button" class="theme-btn btn-style-four prev-step">Previous</button></li>
+                            <input type="submit" name="" value="Register2">
+                            <li><button type="button" class="theme-btn btn-style-three next-step">Save and continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step3">
+
+                            <div class="row clearfix">
+                                <!--Left Column-->
+                                    <div class="right-column col-md-6 col-sm-12 col-xs-12">
+                                        <div class="default-title"><h3>Membership Type</h3></div>
+                                        <div class="row clearfix">
+                                            <div class="form-group col-md-12 col-sm-6 col-xs-12">
+                                                <div class="field-label">Amount <span class="req">*</span></div>
+                                                <select ="" >
+                                                <option>Life Time Membership ($125)</option>
+                                                <option>One Year Membership ($80)</option>
+                                                <option>Six Month Membership ($50)</option>
+                                                <option>Three Month Membership ($30)</option>
+                                                <option>One Month Membership ($20)</option>
+                                            </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--Right Column-->
+                                    <div class="right-column col-md-6 col-sm-12 col-xs-12">
+                                        <div class="default-title"><h3>Card Details</h3></div>
+                                        <div class="card-details">
+                                            <div class="row clearfix">
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-label">Card Number</div>
+
+
+
+
+                                                    <div class="row">
+                                                      <div class="col-md-12 col-sm-12 col-xs-12">
+
+                                                         <input type="text" name="field-name" value="" placeholder="">
+                                                      </div>
+
+
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-inline col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="field-label">MM/YY</div>
+                                                      <input class="card-short"  type="text" name="field-name" value="" size="2" placeholder="" ><input type="text" name="field-name" class="card-short"   value="" size="2" placeholder="" >
+
+                                                </div>
+                                                <div class="form-group form-inline col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="field-label">CVV</div>
+                                                      <input class="card-short"  type="text" name="field-name" value="" size="2" placeholder="" >
+
+                                                </div>
+                                                <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-label">Name on Card</div>
+                                                    <input type="text" name="field-name" value="" placeholder="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                             </div>
+
+                        <ul class="list-inline pull-right wizard-footer">
+                            <li><button type="button" class="theme-btn btn-style-four prev-step">Previous</button></li>
+                            <li><button type="button" class="theme-btn btn-style-four next-step">Skip</button></li>
+                            <li><button type="button" class="theme-btn btn-style-three next-step">Save and continue</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="complete">
+                        <div class="step44">
+                            <h5>Completed</h5>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form> <!-- Form ended for testing -->
+            <!-- </form>    End of membership_form-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

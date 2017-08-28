@@ -9,14 +9,13 @@ import smtplib
 def home(request):
     context=locals()
     template = 'home/home.html'
-    my_dict = {'insert_me' : 'Hi I am from home.html'}
     return render(request,template,context)
 
 def signUp(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST)
         profile_form = ProfileForm(request.POST)
-        print('result19', profile_form.errors.as_data()) #to identify errors , 
+        print('result19', profile_form.errors.as_data()) #to identify errors ,
         if user_form.is_valid() and profile_form.is_valid():
             print('Valid Form')
             user_form.save()
@@ -25,11 +24,9 @@ def signUp(request):
     else:
         user_form = UserForm()
         profile_form = ProfileForm()
-
-    return render(request,'home/loginpage.html',
-                            {'user_form':user_form,
-                            'profile_form':profile_form})
-
+    context = {'user_form':user_form, 'profile_form':profile_form}
+    template = 'home/loginpage.html'
+    return render(request,template,context)
 
 def contact(request):
     contact_form = contactForm(request.POST or None)
@@ -44,6 +41,6 @@ def contact(request):
         print(request.POST)
         send_mail(subject, contact_message, emailfrom, emailto, fail_silently=False)
         return render(request,'home/home.html')
-    context = locals()
+    context = {'contact_form':contact_form}
     template = 'home/contact.html'
     return render(request,template,context)
