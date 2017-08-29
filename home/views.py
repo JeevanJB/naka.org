@@ -11,7 +11,12 @@ def home(request):
     template = 'home/home.html'
     return render(request,template,context)
 
-def signUp(request):
+def login(request):
+    context=locals()
+    template = 'home/loginpage.html'
+    return render(request,template,context)
+
+def signup(request):
     if request.method == 'POST':
         user_form = UserForm(request.POST)
         profile_form = ProfileForm(request.POST)
@@ -25,7 +30,7 @@ def signUp(request):
         user_form = UserForm()
         profile_form = ProfileForm()
     context = {'user_form':user_form, 'profile_form':profile_form}
-    template = 'home/loginpage.html'
+    template = 'home/signup.html'
     return render(request,template,context)
 
 def contact(request):
