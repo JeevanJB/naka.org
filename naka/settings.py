@@ -17,6 +17,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
 STATIC_DIR = os.path.join(BASE_DIR,"static")
 
+LOGIN_URL = 'loginpage.html'
+LOGIN_REDIRECT_URL = 'home.html'
+#LOGOUT_REDIRECT_URL = 'home.html'
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST_USER = ''
@@ -63,6 +67,7 @@ INSTALLED_APPS = [
     'membership',
     'donate',
     'blogs',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -101,8 +106,12 @@ WSGI_APPLICATION = 'naka.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mynakadb',
+        'USER': 'root',
+        'PASSWORD': 'qwerty',
+        'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 

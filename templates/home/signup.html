@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
   {% block content %}
-  <form id="signUp1" method="post" enctype= multipart/form-data class="form default-form" data-transition="fade">
+  <!--
+    <form id="signUp1" method="post" enctype= multipart/form-data class="form default-form" data-transition="fade">
               {% csrf_token %}
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -16,20 +17,20 @@
                         <div class="divider"> <span class="or">OR</span> </div>
                       </div>
                       <div class="form-group col-md-12 col-sm-12 col-xs-12"> Full Name
-                        <!-- <input type="text" name="fullname" value="" placeholder="Full Name" > -->
+                        <!-- <input type="text" name="fullname" value="" placeholder="Full Name" >
                          {{ user_form.first_name }}
                       </div>
-                      <div class="form-group col-md-12 col-sm-12 col-xs-12"> Username/Email
-                        <!-- <input type="text" name="username" value="" placeholder="Email"> -->
+                      <div class="form-group col-md-12 col-sm-12 col-xs-12"> Username
+                        <!-- <input type="text" name="username" value="" placeholder="Email">
                          {{ user_form.username }}
                       </div>
                       <div class="form-group col-md-12 col-sm-12 col-xs-12"> Password
-                        <!-- <input type="password" name="password" value="" placeholder="Password"> -->
+                        <!-- <input type="password" name="password" value="" placeholder="Password">
                          {{ user_form.password }}
                       </div>
-                      <div class="form-group col-md-12 col-sm-12 col-xs-12"> Mobile <br/>
-                        <!-- <input type="text" name="mobile" value="" placeholder="Mobile"> -->
-                         {{ profile_form.mobile }}
+                      <div class="form-group col-md-12 col-sm-12 col-xs-12"> Email <br/>
+                        <!-- <input type="text" name="mobile" value="" placeholder="Mobile">
+                         {{ user_form.email }}
                       </div>
                       <div class="form-group col-md-12 col-sm-12 col-xs-12" style="margin:0">
                         <input type="submit" value = "SignUp"/>
@@ -44,4 +45,73 @@
                 </div>
               </div>
             </form>
+          -->
+    <form id="signUp" method="post" enctype= multipart/form-data>
+      {% csrf_token %}
+      <div class="auto-container">
+        <div class="tab-content">
+              <div class="default-title"><h3>Personal Information</h3></div>
+                <div class="row clearfix">
+                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                    <div class="field-label">First Name <span class="req">*</span></div>
+                    {{ user_form.first_name }}
+                  </div>
+                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                    <div class="field-label">Last Name <span class="req">*</span></div>
+                    {{ user_form.last_name }}
+                  </div>
+                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                    <div class="field-label">Username or Email <span class="req">*</span></div>
+                    {{ user_form.username }}
+                  </div>
+                  <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                    <div class="field-label"> User Type <span class="req">*</span></div>
+                    {{ profile_form.user_orgtype }}
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="default-title"><h3>Address/Phone</h3></div>
+                  <div class="row clearfix">
+                      <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                          <div class="field-label">Cell Phone <span class="req">*</span></div>
+                          <!-- <input type="text" name="field-name" value="" placeholder="" > -->
+                          {{ profile_form.user_cellPhone }}
+                      </div>
+                      <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                          <div class="field-label">Home Phone</div>
+                          <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                          {{ profile_form.user_homePhone }}
+                      </div>
+                      <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                          <div class="field-label">Address<span class="req">*</span></div>
+                          <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                          {{ profile_form.user_address }}
+                      </div>
+                      <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                          <div class="field-label">Country <span class="req">*</span></div>
+                          <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                          {{ profile_form.user_country }}
+                      </div>
+                      <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                          <div class="field-label">State <span class="req">*</span></div>
+                          <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                          {{ profile_form.user_state }}
+                      </div>
+                      <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                          <div class="field-label">City <span class="req">*</span></div>
+                          <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                          {{ profile_form.user_city }}
+                      </div>
+                      <div class="form-group col-md-3 col-sm-6 col-xs-12">
+                          <div class="field-label">Zip <span class="req">*</span></div>
+                          <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                          {{ profile_form.user_zip }}
+                      </div>
+                  </div>
+                  <input type="submit" value = "SignUp"/>
+              </div>
+          </div>
+       </div>
+    </form>
   {% endblock %}

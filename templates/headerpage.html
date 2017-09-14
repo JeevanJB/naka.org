@@ -35,11 +35,16 @@
             </div>
 
             <!--Top Right-->
-            <div class="top-right">
-              <div class="login pull-right">
-                <button type="button" class="theme-btn btn-style-three btn-xs" data-toggle="modal" data-target="#myModal"> <i class="fa fa-user" aria-hidden="true" ></i> Login</button>
+            {% if user.is_authenticated %}
+              <p>Welcome {{ user.username }} !!!</p>
+              <button type="button" class="theme-btn btn-style-three btn-xs" data-toggle="modal" data-target="#myModal"> <i class="fa fa-user" aria-hidden="true" ></i> Logout</button>
+            {% else %}
+              <div class="top-right">
+                <div class="login pull-right">
+                  <button type="button" class="theme-btn btn-style-three btn-xs" data-toggle="modal" data-target="#myModal"> <i class="fa fa-user" aria-hidden="true" ></i> Login</button>
+                </div>
               </div>
-            </div>
+            {% endif %}
           </div>
         </div>
       </div>

@@ -17,10 +17,12 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from home import views
 from aboutus import views
+from membership import views
 
-#Any Extension used in-place of 'naka' will be reflected in Browser URL
+#Any Extension can be used in-place of 'naka' & will be reflected in Browser URL
 urlpatterns = [
     url(r'^naka/',include('home.urls')),
     url(r'^naka/',include('aboutus.urls')),
+    url(r'^naka/',include('membership.urls')),
     url(r'^admin/', admin.site.urls),
 ]

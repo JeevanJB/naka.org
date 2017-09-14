@@ -7,16 +7,16 @@
   {% csrf_token %}
   <div class="form-group col-md-9 col-sm-6 col-xs-12">
       <div class="field-label">Name <span class="req">*</span></div>
-  {{ contact_form.contact_name }}
+  {{ contact_form.fullname }}
   </div>
   <div class="form-group col-md-12 col-sm-12 col-xs-12">
       <div class="field-label">Email Id <span class="req">*</span></div>
-  {{ contact_form.contact_email }}
+  {{ contact_form.email }}
   </div>
 
   <div class="form-group col-md-6 col-sm-6 col-xs-12">
       <div class="field-label">Comment <span class="req">*</span></div>
-  {{ contact_form.contact_comment }}
+  {{ contact_form.comment }}
   </div>
   </br/>
   <div class="form-group col-md-9 col-sm-6 col-xs-12">
