@@ -1,0 +1,197 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+<!--  <h3>Volunteer Form </h3> -->
+  <form method="post" action="">
+    {% csrf_token %}
+
+  <!--<div class="form-group col-md-9 col-sm-6 col-xs-12">
+      <div class="field-label">Name <span class="req">*</span></div>
+  {{ volunteer_form.first_name }}
+  </div>
+  <div class="form-group col-md-9 col-sm-6 col-xs-12">
+      <div class="field-label">Email Id <span class="req">*</span></div>
+  {{ volunteer_form.last_name }}
+</div> -->
+
+    <div class="tab-pane" role="tabpanel" id="step2">
+        <div class="step2">
+        <div class="row clearfix">
+
+        <div class="right-column col-md-12 col-sm-12 col-xs-12">
+          <div class="default-title"><h3>Volunteer Form</h3></div>
+          <div class="row clearfix">
+
+            <div class="form-group col-md-4 col-sm-6 col-xs-12">
+              <div class="field-label">Do you like to Volunteer for: </div>
+              <div class="form-group">
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value=""> -->
+                    {{ volunteer_form.events }}
+                    Events
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value="">-->
+                    {{ volunteer_form.community_service }}
+                    Community Service
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value="">-->
+                    {{ volunteer_form.team_square }}
+                    Team Square
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value="">-->
+                    {{ volunteer_form.language_literature }}
+                    Language/Literature
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value="">-->
+                    {{ volunteer_form.sports_arts }}
+                    Sports/Arts
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value="">-->
+                    {{ volunteer_form.foundation }}
+                    Foundation
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value="">-->
+                    {{ volunteer_form.womens_support }}
+                    Women’s Support
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label>
+                    <!--<input type="checkbox" value="">-->
+                    {{ volunteer_form.spiritual }}
+                    Spiritual
+                  </label>
+                </div>  <!-- endof class 'checkbox' -->
+              </div>  <!-- endof class 'form-group' for Do you like to volunteer for? -->
+            </div>  <!-- endof class 'form-group col-md-6' -->
+
+            <div class="form-group col-md-4 col-sm-6 col-xs-12">
+              <div class="field-label">Interests/Skills</div>
+               <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                <!-- {{ membership_form.interests }} -->
+                <div class="form-group">
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.computer_usage }}
+                      Computer Usage
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.manual_labor }}
+                      Manual Labor
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.marketing }}
+                      Marketing
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.fundraising }}
+                      Fundraising
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.event_planning }}
+                      Event Planning
+                    </label>
+                  </div>  <!-- endof class 'checkbox' -->
+                </div>  <!-- endof class 'form-group' for Interests/Skills -->
+            </div>  <!-- endof class 'form-group col-md-6' -->
+
+            <div class="form-group col-md-4 col-sm-6 col-xs-12">
+              <div class="field-label">Availability</div>
+               <!-- <input type="text" name="field-name" value="" placeholder=""> -->
+                <!-- {{ membership_form.interests }} -->
+                <div class="form-group">
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.weekdays }}
+                      Weekdays
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.weekends }}
+                      Weekends
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.morning }}
+                      Morning
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.afternoon }}
+                      Afternoon
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      {{ volunteer_form.weekly }}
+                      Weekly
+                    </label>
+                  </div>  <!-- endof class 'checkbox' -->
+                </div>  <!-- endof class 'form-group' for Interests/Skills -->
+            </div>  <!-- endof class 'form-group col-md-6' -->
+
+          </div>  <!-- endof class 'row clearfix (within class right column)' -->
+          </div>  <!-- endof class 'right-column' -->
+        </div>  <!-- endof class 'row clearfix' -->
+      </div>  <!-- endof class 'step2' -->
+    </div>  <!-- endof class 'tab-pane' -->
+
+  </br/>
+    <div class="form-group col-md-9 col-sm-6 col-xs-12">
+      <li><input type="submit" class="theme-btn btn-style-three next-step"></button></li>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+<!-- ADD FIELDS FOR SKILLS/INTERESTS
+ADD TEMPLATE TAGS . DONE -->
